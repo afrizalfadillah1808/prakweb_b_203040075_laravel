@@ -27,9 +27,9 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",
-        "name" => "Asril Permana",
-        "email" => "asrillper@gmail.com",
-        "image" => "picture.jpg"
+        "name" => "Muhammad Afrizal Fadillah",
+        "email" => "ijal@gmail.com",
+        "image" => "ijal.jpg"
     ]);
 });
 
