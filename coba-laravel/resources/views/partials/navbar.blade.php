@@ -6,13 +6,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" href="/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link {{ ($active === "home") ? 'active' : '' }}" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="/about">About</a>
+          <a class="nav-link {{ ($active === "about") ? 'active' : '' }}" href="/about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ ($title === "Posts") ? 'active' : '' }}" href="/blog">Blog</a>
+          <a class="nav-link {{ ($active === "posts") ? 'active' : '' }}" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Categories</a>
         </li>
       </ul>
     </div>
