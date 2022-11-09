@@ -12,7 +12,7 @@ class Post extends Model
     // protected $fillable = ['title', 'excerpt', 'body'];
     protected $guarded = ['id'];
     protected $with = ['author', 'category'];
-    protected $with = ['category', 'author'];
+    // protected $with = ['author', 'category'];
 
     public function scopeFilter($query, array $filters)
     {
