@@ -5,13 +5,17 @@
         <div class="col-lg-5">
             <main class="form-registration">
                 <h1 class="h3 mb-3 fw-normal text-center mt-3">Registration Form</h1>
-                <form>
-
+                <form action="/register" method="post">
+                    @csrf
                     <div class="form-floating">
-                        <input type="text" name="name" class="form-control rounded-top" id="name" placeholder="Name">
+                        <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" placeholder="Name">
                         <label for="name">Name</label>
-                    </div>
-
+                        @error('name')
+                            <div class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                                @enderror
+                            </div>
                     <div class="form-floating">
                         <input type="text" name="username" class="form-control" id="username" placeholder="Username">
                         <label for="username">Username</label>

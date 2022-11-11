@@ -37,7 +37,7 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/blog', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index']);
 // halaman single post
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
@@ -68,3 +68,4 @@ Route::get('/authors/{author:username}', function (User $author) {
 Route::get('/login', [LoginController::class, 'index']);
 
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
